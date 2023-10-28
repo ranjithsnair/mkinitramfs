@@ -151,7 +151,6 @@ run_build_hook() {
 		for hook in $HOOKS; do
 			[ "$(echo $DONEHOOK | tr ' ' '\n' | grep -x $hook)" = "$hook" ] && continue
 			hookpath=/usr/share/mkinitramfs/hooks/$hook.hook
-			echo "$hookpath"
 			if [ "$hookpath" ]; then
 				. "$hookpath"
 				if [ "$(command -v build_hook)" ]; then
