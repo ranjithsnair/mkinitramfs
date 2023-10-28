@@ -147,6 +147,7 @@ finalize_modules() {
 }
 
 get_hook_path() {
+	echo $1
 	case $1 in
 		*/*) [ -f $1 ] && echo $1;;
 		*) for i in $(echo $HOOKDIRS | tr ':' ' '); do
