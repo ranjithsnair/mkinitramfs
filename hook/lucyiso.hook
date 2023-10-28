@@ -25,7 +25,7 @@ run_earlyhook() {
 mount_lucyiso() {
 	newroot=$1
 		
-	MEDIA=/dev/disk/by-label/LUCY
+	MEDIA=/dev/disk/by-label/lucy
 	MEDIUM=/run/initramfs/medium
 	SYSTEM=/run/initramfs/system
 	WRITEDIR=/run/initramfs/overlayfs/write
