@@ -59,7 +59,7 @@ add_file() {
 	[ "$1" ] || return
 	
 	src=$1
-	echo $src
+	
 	if [ "$(echo $src | head -c1)" != "/" ]; then
 		msgwarn "absolute source path needed: $src"
 		return
@@ -158,6 +158,7 @@ run_build_hook() {
 					build_hook
 				fi
 				echo $hook >> $INITDIR/hook/hook.order
+				echo "$hookpath" hook/$hook
 				add_file "$hookpath" hook/$hook 755
 				DONEHOOK="$DONEHOOK $hook"
 				unset hookpath build_hook hook
