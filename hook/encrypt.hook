@@ -35,7 +35,7 @@ run_earlyhook() {
 		read inputvariable <> $CONSOLE
 		stty -F $CONSOLE $stty_orig
 		echo
-		echo -n $inputvariable | cryptsetup open --type luks $device venom - > /dev/null && SUCCESS=1
+		echo -n $inputvariable | cryptsetup open --type luks $device lucy - > /dev/null && SUCCESS=1
 		inputvariable=
 		TRIES=`expr $TRIES + 1`
 	done

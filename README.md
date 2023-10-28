@@ -7,8 +7,8 @@ Usage:
   mkinitramfs [option] [argument]
   
 Options:
-  -k <version>  custom kernel version (default: 4.19.66-Venom)
-  -o <output>   custom output name (default: initrd-4.19.66-Venom.img)
+  -k <version>  custom kernel version (default: 6.4.12)
+  -o <output>   custom output name (default: initrd.img)
   -i <init>     custom init file (default: /usr/share/mkinitramfs/init.in)
   -m <modules>  add extra modules (comma separated)
   -b <binaries  add extra binary (comma separated)
