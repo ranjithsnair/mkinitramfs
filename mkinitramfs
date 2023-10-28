@@ -59,7 +59,7 @@ add_file() {
 	[ "$1" ] || return
 	
 	src=$1
-	
+	echo $src
 	if [ "$(echo $src | head -c1)" != "/" ]; then
 		msgwarn "absolute source path needed: $src"
 		return
